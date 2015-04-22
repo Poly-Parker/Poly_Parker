@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/map"
+        android:layout_weight="40"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/parkingmap"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_weight="60"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_weight="50"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF">
+
+            <TextView
+                android:id="@+id/congested"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Least Congested"
+                android:layout_centerHorizontal="true"
+                android:textColor="#2DC234" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_below="@+id/congested"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_weight="50"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_weight="50"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Lot A"
+                        android:gravity="center"
+                        android:textColor="#2DC234" />
+
+                    <TextView
+                        android:layout_weight="50"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="1 min"
+                        android:gravity="center"
+                        android:background="#2DC234"
+                        android:textColor="#FFFF00" />
+
+                 </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="50"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_weight="50"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Lot B"
+                        android:gravity="center"
+                        android:textColor="#2DC234"/>
+
+                    <TextView
+                        android:layout_weight="50"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="1 min"
+                        android:gravity="center"
+                        android:background="#2DC234"
+                        android:textColor="#FFFF00" />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_weight="50"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF">
+
+            <TextView
+                android:id="@+id/recent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recent"
+                android:layout_centerHorizontal="true"
+                android:textColor="#2DC234" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_below="@+id/recent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_weight="50"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_weight="50"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Lot C"
+                        android:gravity="center"
+                        android:textColor="#2DC234" />
+
+                    <TextView
+                        android:layout_weight="50"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="9 min"
+                        android:gravity="center"
+                        android:background="#2DC234"
+                        android:textColor="#FFFF00" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="50"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_weight="50"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Lot D"
+                        android:gravity="center"
+                        android:textColor="#2DC234"/>
+
+                    <TextView
+                        android:gravity="center"
+                        android:layout_weight="50"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="5 min"
+                        android:background="#2DC234"
+                        android:textColor="#FFFF00" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
