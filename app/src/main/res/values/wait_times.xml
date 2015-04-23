@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wait_times">
+        <item>1 Min</item>
+        <item>2 Min</item>
+        <item>3 Min</item>
+        <item>4 Min</item>
+        <item>5 Min</item>
+        <item>6 Min</item>
+        <item>7 Min</item>
+        <item>8 Min</item>
+        <item>9 Min</item>
+        <item>10 Min</item>
+        <item>11 Min</item>
+        <item>12 Min</item>
+        <item>13 Min</item>
+        <item>14 Min</item>
+        <item>15 Min</item>
+        <item>16 Min</item>
+        <item>17 Min</item>
+        <item>18 Min</item>
+        <item>19 Min</item>
+        <item>20 Min</item>
+    </string-array>
+</resources>

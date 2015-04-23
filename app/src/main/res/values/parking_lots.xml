@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="lots">
+        <item>Lot A</item>
+        <item>Lot B</item>
+        <item>Lot C</item>
+        <item>Lot D</item>
+        <item>Lot E</item>
+        <item>Lot J</item>
+        <item>Lot K</item>
+        <item>Lot I</item>
+    </string-array>
+</resources>
