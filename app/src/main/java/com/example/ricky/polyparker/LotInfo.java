@@ -1,31 +1,41 @@
 package com.example.ricky.polyparker;
 
+import com.parse.ParseClassName;
+import com.parse.ParseObject;
+
 /**
  * Created by Ricky on 4/25/2015.
  */
-public class LotInfo {
+
+@ParseClassName("LotInfo")
+public class LotInfo extends ParseObject{
 
     private String lotName;
     private int waitTime;
 
+    public LotInfo(){
+        lotName = "NULL";
+        waitTime = -1;
+    }
+
     public LotInfo(String lotName, int waitTime){
-        this.lotName = lotName;
-        this.waitTime = waitTime;
+        put("lotName", lotName);
+        put("waitTime", waitTime);
     }
 
     public void setLotName(String lotName) {
-        this.lotName = lotName;
+        put("lotName", lotName);
     }
 
     public void setWaitTime(int waitTime) {
-        this.waitTime = waitTime;
+        put("waitTime", waitTime);
     }
 
     public String getLotName() {
-        return lotName;
+        return getString("lotName");
     }
 
     public int getWaitTime() {
-        return waitTime;
+        return getInt("waitTime");
     }
 }

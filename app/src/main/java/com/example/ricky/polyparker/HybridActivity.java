@@ -27,7 +27,7 @@ public class HybridActivity extends Activity {
         congestedList.add(new LotInfo("Lot B", 9));
         congestedList.add(new LotInfo("Lot C", 7));
         congestedList.add(new LotInfo("Lot D", 2));
-        congestedList.add(new LotInfo("Lot E", 1));
+        congestedList.add(new LotInfo( "Lot E", 1));
         congestedList.add(new LotInfo("Lot F", 5));
         congestedList.add(new LotInfo("Lot G", 20));
 
