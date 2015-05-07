@@ -12,9 +12,9 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/parkinglogo"
-            android:paddingLeft="130dp"
-            android:paddingRight="130dp"/>
+            android:src="@drawable/banner"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"/>
 
         </RelativeLayout>
 

@@ -39,8 +39,8 @@ public class ContributeActivity extends Activity {
             @Override
             public void onClick(View v) {
                 ParseObject lotInfo = ParseObject.create("LotInfo");
-                lotInfo.put("lotName", LOT_SPINNER.getSelectedItem().toString());
-                lotInfo.put("waitTime", Integer.parseInt("" + TIME_SPINNER.getSelectedItem().toString().charAt(0)));
+                lotInfo = new LotInfo(LOT_SPINNER.getSelectedItem().toString(),
+                        Integer.parseInt("" + TIME_SPINNER.getSelectedItem().toString().charAt(0)));
                 lotInfo.saveInBackground();
                 Toast.makeText(ContributeActivity.this, "Thank You!", Toast.LENGTH_LONG).show();
                 submitButton.setEnabled(false);

@@ -2,9 +2,15 @@ package com.example.ricky.polyparker;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ListView;
 
+import com.parse.FindCallback;
+import com.parse.ParseException;
+import com.parse.ParseQuery;
+
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Ricky on 4/21/2015.
@@ -26,10 +32,11 @@ public class HybridActivity extends Activity {
         congestedList.add(new LotInfo("Lot A", 10));
         congestedList.add(new LotInfo("Lot B", 9));
         congestedList.add(new LotInfo("Lot C", 7));
-        congestedList.add(new LotInfo("Lot D", 2));
-        congestedList.add(new LotInfo( "Lot E", 1));
-        congestedList.add(new LotInfo("Lot F", 5));
-        congestedList.add(new LotInfo("Lot G", 20));
+        congestedList.add(new LotInfo("Lot E1", 2));
+        congestedList.add(new LotInfo("Lot E2", 1));
+        congestedList.add(new LotInfo("Lot J", 5));
+        congestedList.add(new LotInfo("Lot K", 20));
+
 
         ListView congestedView = (ListView) findViewById(R.id.congested_list_view);
 
@@ -37,17 +44,22 @@ public class HybridActivity extends Activity {
 
         congestedView.setAdapter(congestedListAdapter);
 
-        recentList = new ArrayList<LotInfo>();
-        recentList.add(new LotInfo("Lot J1", 13));
-        recentList.add(new LotInfo("Lot J2", 12));
-        recentList.add(new LotInfo("Lot J3", 10));
-        recentList.add(new LotInfo("Lot J4", 9));
-        recentList.add(new LotInfo("Lot J5", 4));
+        // Query all entries on Parse and display on all submitted
+        ParseQuery<LotInfo> lotInfoQuery = ParseQuery.getQuery(LotInfo.class);
 
-        ListView recentView = (ListView) findViewById(R.id.recent_listView);
-
-        recentListAdapter = new LotInfoAdapter(this, recentList);
-
-        recentView.setAdapter(recentListAdapter);
+        lotInfoQuery.findInBackground(new FindCallback<LotInfo>() {
+            @Override
+            public void done(List<LotInfo> lotInfoQuery, ParseException e) {
+                if (e == null) {
+                    ListView allSubmitView = (ListView) findViewById(R.id.recent_listView);
+                    recentListAdapter = new LotInfoAdapter(HybridActivity.this, lotInfoQuery);
+                    Log.i("LotInfo", "list Size = " + lotInfoQuery.size());
+                    allSubmitView.setAdapter(recentListAdapter);
+                }
+                else {
+                    Log.i("LotInfo", e.toString());
+                }
+            }
+        });
     }
 }

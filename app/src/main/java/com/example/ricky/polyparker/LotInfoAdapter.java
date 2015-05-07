@@ -7,7 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
 
 /**
  * Created by Ricky on 4/25/2015.
@@ -15,9 +16,9 @@ import java.util.ArrayList;
 public class LotInfoAdapter extends ArrayAdapter<LotInfo> {
 
     public Context context;
-    public ArrayList <LotInfo> lotInfos;
+    public List <LotInfo> lotInfos;
 
-    public LotInfoAdapter (Context context, ArrayList<LotInfo> lotInfos){
+    public LotInfoAdapter (Context context, List<LotInfo> lotInfos){
         super(context, R.layout.listview_item, lotInfos);
         this.context = context;
         this.lotInfos = lotInfos;
@@ -32,7 +33,7 @@ public class LotInfoAdapter extends ArrayAdapter<LotInfo> {
         lotView.setText(lotInfos.get(position).getLotName());
 
         TextView waitView = (TextView) view.findViewById(R.id.time_text);
-        waitView.setText("" + lotInfos.get(position).getWaitTime() + "Min");
+        waitView.setText("" + lotInfos.get(position).getWaitTime() + " Min");
 
         return view;
     }

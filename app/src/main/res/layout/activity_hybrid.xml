@@ -26,7 +26,7 @@
                 android:id="@+id/congested"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Least Congested"
+                android:text="All Lots"
                 android:layout_centerHorizontal="true"
                 android:textColor="#2DC234" />
 
@@ -50,7 +50,7 @@
                 android:id="@+id/recent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Recent"
+                android:text="All Submitted"
                 android:layout_centerHorizontal="true"
                 android:textColor="#2DC234" />
 
