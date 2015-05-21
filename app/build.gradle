@@ -5,7 +5,7 @@ android {
     buildToolsVersion "21.1.2"
 
     defaultConfig {
-        applicationId "com.example.ricky.polyparker"
+        applicationId "com.cs499.ricky.polyparker"
         minSdkVersion 15
         targetSdkVersion 21
         versionCode 1
