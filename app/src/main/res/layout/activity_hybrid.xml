@@ -3,16 +3,16 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <WebView
-        android:id="@+id/webMap"
-        android:layout_weight="45"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"></WebView>
-
+    <ImageView
+        android:id="@+id/map"
+        android:layout_weight="40"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/parkingmap"/>
 
     <LinearLayout
         android:orientation="horizontal"
-        android:layout_weight="55"
+        android:layout_weight="60"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -26,12 +26,12 @@
                 android:id="@+id/congested"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Total Averages"
+                android:text="All Lots"
                 android:layout_centerHorizontal="true"
                 android:textColor="#2DC234" />
 
             <ListView
-                android:id="@+id/total_avg_listView"
+                android:id="@+id/congested_list_view"
                 android:layout_below="@+id/congested"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"/>
@@ -50,12 +50,12 @@
                 android:id="@+id/recent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Recent Averages"
+                android:text="All Submitted"
                 android:layout_centerHorizontal="true"
                 android:textColor="#2DC234" />
 
             <ListView
-                android:id="@+id/recent_avg_listView"
+                android:id="@+id/recent_listView"
                 android:layout_below="@id/recent"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"></ListView>
@@ -63,14 +63,5 @@
         </RelativeLayout>
 
     </LinearLayout>
-
-    <Button
-        android:layout_margin="1dp"
-        android:id="@+id/refresh_button"
-        android:text="Refresh"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#2DC234"
-        android:textColor="#FFFFFF"/>
 
 </LinearLayout>

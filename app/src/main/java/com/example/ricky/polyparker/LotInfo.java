@@ -1,4 +1,4 @@
-package com.cs499.ricky.polyparker;
+package com.example.ricky.polyparker;
 
 import android.util.Log;
 
@@ -76,32 +76,5 @@ public class LotInfo extends ParseObject{
 
     public int getWaitTime() {
         return getInt("waitTime");
-    }
-
-    public boolean isrecentlySubmitted(){
-        //printDateCompare();
-        Calendar cal = Calendar.getInstance();
-        if (cal.get(Calendar.YEAR) != getYear()) return false;
-        if (cal.get(Calendar.MONTH)!= getMonth()) return false;
-        if (cal.get(Calendar.DAY_OF_MONTH) != getDayOfMonth()) return false;
-        if (cal.get(Calendar.DAY_OF_WEEK)!= getDayOfWeek()) return false;
-        if (cal.get(Calendar.HOUR_OF_DAY) != getHour()) {
-            if (cal.get(Calendar.MINUTE) > 10) return false;
-            else {
-                if (cal.get(Calendar.HOUR_OF_DAY) != getHour() + 1 ) return false;
-                else {
-                    int offset = 9 - cal.get(Calendar.MINUTE);
-                    if (getMinute() < (59 - offset) ) return false;
-                }
-            }
-        }
-        else if (getMinute() < cal.get(Calendar.MINUTE) - 10) return false;
-        return true;
-    }
-
-    public void printDateCompare(){
-        Log.i("~TIMEDEGUG~Instance", "" + getInt("hour") + ":" + minute + "::" + dayOfMonth + "," + month  + "," + year);
-        Calendar cal = Calendar.getInstance();
-        Log.i("~TIMEDEGUG-Compare~", "" + cal.get(Calendar.HOUR) + ":" + cal.get(Calendar.MINUTE) + "::" + cal.get(Calendar.DAY_OF_MONTH) + "," + cal.get(Calendar.MONTH)  + "," + cal.get(Calendar.YEAR));
     }
 }

@@ -1,4 +1,4 @@
-package com.cs499.ricky.polyparker;
+package com.example.ricky.polyparker;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -39,18 +39,12 @@ public class ContributeActivity extends Activity {
             @Override
             public void onClick(View v) {
                 ParseObject lotInfo = ParseObject.create("LotInfo");
-                int time;
-                try{
-                    time = Integer.parseInt(TIME_SPINNER.getSelectedItem().toString().substring(0,2));
-                }
-                catch(Exception e){
-                    time = Integer.parseInt(TIME_SPINNER.getSelectedItem().toString().substring(0,1));
-                }
-                lotInfo = new LotInfo(LOT_SPINNER.getSelectedItem().toString(), time);
+                lotInfo = new LotInfo(LOT_SPINNER.getSelectedItem().toString(),
+                        Integer.parseInt("" + TIME_SPINNER.getSelectedItem().toString().charAt(0)));
                 lotInfo.saveInBackground();
                 Toast.makeText(ContributeActivity.this, "Thank You!", Toast.LENGTH_LONG).show();
-//                submitButton.setEnabled(false);
-//                submitButton.setText("Submitted, Thank You!");
+                submitButton.setEnabled(false);
+                submitButton.setText("Submitted, Thank You!");
             }
         });
     }

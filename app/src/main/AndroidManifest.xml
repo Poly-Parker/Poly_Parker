@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.cs499.ricky.polyparker">
+    package="com.example.ricky.polyparker">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -9,22 +9,25 @@
         android:label="@string/app_name"
         android:icon="@drawable/icon"
         android:theme="@style/AppTheme"
-        android:name=".PolyParkerApplication">
+        android:name=".ParseApplication">
+
+
         <activity
-            android:name="com.cs499.ricky.polyparker.SplashScreen"
+            android:name=".SplashScreen"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.cs499.ricky.polyparker.MainActivity" android:screenOrientation="portrait"/>
-        <activity android:name="com.cs499.ricky.polyparker.HybridActivity" android:screenOrientation="portrait"/>
-        <activity android:name="com.cs499.ricky.polyparker.TabbedActivity" android:screenOrientation="portrait"/>
-        <activity android:name="com.cs499.ricky.polyparker.ListTabActivity" android:screenOrientation="portrait"/>
-        <activity android:name="com.cs499.ricky.polyparker.MapActivity" android:screenOrientation="portrait"/>
-        <activity android:name="com.cs499.ricky.polyparker.ContributeActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".HybridActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".TabbedActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ListTabActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MapActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ContributeActivity" android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.cs499.ricky.polyparker;
+package com.example.ricky.polyparker;
 
 import android.app.Activity;
 import android.content.Intent;

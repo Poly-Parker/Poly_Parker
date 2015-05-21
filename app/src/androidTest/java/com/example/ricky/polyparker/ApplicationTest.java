@@ -1,4 +1,4 @@
-package com.cs499.ricky.polyparker;
+package com.example.ricky.polyparker;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
