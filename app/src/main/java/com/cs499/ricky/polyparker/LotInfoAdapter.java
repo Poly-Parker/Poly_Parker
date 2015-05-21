@@ -1,4 +1,4 @@
-package com.example.ricky.polyparker;
+package com.cs499.ricky.polyparker;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import java.util.Calendar;
 import java.util.List;
 
 /**

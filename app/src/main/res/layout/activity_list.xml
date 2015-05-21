@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="match_parent"
+    android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_weight="90"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_weight="50"
@@ -13,12 +19,12 @@
             android:id="@+id/congested"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="All Lots"
+            android:text="Total Averages"
             android:layout_centerHorizontal="true"
             android:textColor="#2DC234" />
 
         <ListView
-            android:id="@+id/congested_list_view"
+            android:id="@+id/total_avg_listView"
             android:layout_below="@+id/congested"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"></ListView>
@@ -35,16 +41,27 @@
             android:id="@+id/recent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="All Submitted"
+            android:text="Recent Averages"
             android:layout_centerHorizontal="true"
             android:textColor="#2DC234" />
 
         <ListView
-            android:id="@+id/recent_listView"
+            android:id="@+id/recent_avg_listView"
             android:layout_below="@id/recent"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"></ListView>
 
     </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_margin="1dp"
+        android:layout_weight="10"
+        android:id="@+id/refresh_button"
+        android:text="Refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2DC234"
+        android:textColor="#FFFFFF"/>
 
 </LinearLayout>
