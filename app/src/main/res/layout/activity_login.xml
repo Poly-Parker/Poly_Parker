@@ -26,30 +26,47 @@
         android:paddingLeft="10dp">
 
         <EditText
-            android:id="@+id/broncoName"
+            android:id="@+id/userName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="20dp"
-            android:hint="BroncoName"/>
+            android:hint="Username"/>
 
         <EditText
-            android:id="@+id/broncoPass"
+            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:hint="BroncoPassword"
+            android:hint="Password"
             android:paddingTop="20dp"
-            android:layout_below="@+id/broncoName"/>
+            android:layout_below="@+id/userName"/>
 
         <Button
             android:id="@+id/login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/broncoPass"
+            android:layout_below="@id/password"
             android:layout_marginTop="20dp"
             android:text="Login"
             android:textColor="#ffffff"
             android:background="#19C422" />
+
+        <Button
+            android:id="@+id/signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login"
+            android:layout_marginTop="5dp"
+            android:text="SignUp"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:id="@+id/forgotPW"
+            android:layout_centerInParent="true"
+            android:text="Forgot Password?"
+            android:layout_below="@id/signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
         </RelativeLayout>
 <!--Testing sync-->
