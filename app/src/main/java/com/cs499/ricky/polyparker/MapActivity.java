@@ -29,7 +29,5 @@ public class MapActivity extends Activity{
             }
         });
         map.zoomOut();
-        //ImageView view = (ImageView) findViewById(R.id.map2);
-        //view.setOnTouchListener(this);
     }
 }

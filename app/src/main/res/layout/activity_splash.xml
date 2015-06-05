@@ -5,7 +5,7 @@
     android:background="#FFFFFF">
 
     <ImageView
-        android:src="@drawable/banner"
+        android:src="@drawable/banner2"
         android:padding="25dp"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" />

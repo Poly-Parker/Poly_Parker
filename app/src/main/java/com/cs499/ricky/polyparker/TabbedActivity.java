@@ -21,7 +21,8 @@ public class TabbedActivity extends TabActivity{
         mTabHost.addTab(mTabHost.newTabSpec("Hybrid").setIndicator("Hybrid").setContent(new Intent(this, HybridActivity.class)));
         mTabHost.addTab(mTabHost.newTabSpec("List").setIndicator("List").setContent(new Intent(this, ListTabActivity.class)));
         mTabHost.addTab(mTabHost.newTabSpec("Map").setIndicator("Map").setContent(new Intent(this, MapActivity.class)));
-        mTabHost.addTab(mTabHost.newTabSpec("Contribute").setIndicator("Contribute").setContent(new Intent(this, ContributeActivity.class)));
+        mTabHost.addTab(mTabHost.newTabSpec("Share").setIndicator("Share").setContent(new Intent(this, ContributeActivity.class)));
+        mTabHost.addTab(mTabHost.newTabSpec("Logout").setIndicator("Logout").setContent(new Intent(this, LogoutActivity.class)));
         mTabHost.setCurrentTab(0);
         mTabHost.getTabWidget().setBackgroundColor(Color.parseColor("#19C422"));
 

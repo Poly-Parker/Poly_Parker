@@ -49,8 +49,8 @@ public class ContributeActivity extends Activity {
                 lotInfo = new LotInfo(LOT_SPINNER.getSelectedItem().toString(), time);
                 lotInfo.saveInBackground();
                 Toast.makeText(ContributeActivity.this, "Thank You!", Toast.LENGTH_LONG).show();
-//                submitButton.setEnabled(false);
-//                submitButton.setText("Submitted, Thank You!");
+                submitButton.setEnabled(false);
+                submitButton.setText("Submitted, Thank You!");
             }
         });
     }

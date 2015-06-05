@@ -7,6 +7,7 @@ import android.os.Handler;
 
 import com.parse.GetCallback;
 import com.parse.ParseSession;
+import com.parse.ParseUser;
 
 /**
  * Created by Ricky on 5/6/2015.
@@ -30,8 +31,14 @@ public class SplashScreen extends Activity {
 
             @Override
             public void run() {
-                Intent i = new Intent(SplashScreen.this, MainActivity.class);
-                startActivity(i);
+                Intent intent;
+                if ( ParseUser.getCurrentUser() == null) {
+                    intent = new Intent(SplashScreen.this, MainActivity.class);
+                }
+                else {
+                    intent = new Intent(SplashScreen.this, TabbedActivity.class);
+                }
+                startActivity(intent);
                 finish();
             }
         }, SPLASH_TIME_OUT);
